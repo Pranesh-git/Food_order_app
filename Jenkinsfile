@@ -4,6 +4,7 @@ pipeline {
         stage("Print node version") {
             steps {
                 sh "node -v"
+                sh "npm -v"
                 sh "which node"
                 sh "which npm"
             }
