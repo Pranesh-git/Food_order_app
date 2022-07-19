@@ -1,11 +1,6 @@
 pipeline {
     agent any
     stages {
-        stage("Install Node"){
-            steps {
-                sh "sudo apt-get install nodejs"
-            }
-        }
         stage("Build") {
             steps {
                 sh "sudo npm install"
