@@ -1,6 +1,12 @@
 pipeline {
     agent any
     stages {
+        stage("Installation") {
+            sh "sudo apt install curl"
+            sh "curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash"
+            sh "source ~/.profile"
+            sh "nvm install --lts"
+        }
         stage("Build") {
             steps {
                 sh "sudo npm install"
