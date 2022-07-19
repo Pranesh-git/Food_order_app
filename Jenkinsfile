@@ -5,6 +5,7 @@ pipeline {
             steps {
                 sh "node -v"
                 sh "which node"
+                sh "which npm"
             }
         }
         stage("Build") {
