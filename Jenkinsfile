@@ -1,9 +1,6 @@
 pipeline {
     agent any
     stages {
-        env.NODEJS_HOME = "${tool 'NodeJsv16.16.0'}"
-        env.PATH="${env.NODEJS_HOME}/bin:${env.PATH}"
-        sh 'npm --version'
         stage("Build") {
             steps {
                 sh "sudo npm install"
