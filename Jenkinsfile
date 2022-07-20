@@ -12,7 +12,6 @@ pipeline {
         stage("Build") {
             steps {
                 sh "sudo npm install"
-                sh "sudo npm install react-scripts --save"
                 sh "sudo npm run build"
             }
         }
