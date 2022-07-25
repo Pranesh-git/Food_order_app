@@ -12,6 +12,7 @@ pipeline {
         stage("Build") {
             steps {
                 sh "sudo npm install"
+                sh "sudo chmod +x node_modules/.bin/react-scripts"
                 sh "sudo npm run build"
             }
         }
